@@ -15,9 +15,7 @@ const maxAlto = 700;
 d3.csv('../data/data.csv', function (d) {
     return [
         +d['Ano'],
-        +d['Total'],
-        +d['Norteamerica'],
-        +d['Europe']
+        +d['Total']
     ]
 }).then(plot_data);
 
