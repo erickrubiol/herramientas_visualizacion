@@ -12,7 +12,7 @@ const maxAlto = 700;
 
 
 // Cargar los datos desde el archivo csv (asociacion)
-d3.csv('/data/data.csv', function (d) {
+d3.csv('https://raw.githubusercontent.com/erickrubiol/herramientas_visualizacion/main/data/data.csv', function (d) {
     return [
         +d['Ano'],
         +d['Total'],
