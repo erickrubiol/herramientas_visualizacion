@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con D3 Parte I</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+  <!-- Banner superior del sitio web -->
+  <nav class="d-flex jutify-content-between navbar navbar-light bg-light shadow">
+    <a href="/">
+        <img src="https://www.unir.net/wp-content/uploads/2020/03/logo-horizontal-1536x925.png" class="logo">
+    </a>
+    Materia: Herramientas de visualización
+  </nav>   
+
+
+  <!-- Panel izquierdo que contiene la descripcion del proyecto -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3"  align="justify">
+        <h4>Calidad media de los juegos</h4>
+        <p>Después de analizar el comportamiento del mercado total en el primer ejercicio, se ha decidido estudiar la calidad de los juegos publicados usando el indicador de calificación de los usuarios.</p>
+        <p>Se ha descubierto que la calidad promedio de los juegos ha bajado a lo largo del tiempo, especialmente en algunos géneros en los que se ha recurrido a mejoras incrementales en vez de innovar en jugabilidad o desarrollo de historia.</p>
+        <p>La primer fila de la matriz muestra claramente la caida en calidad promedio.</p>
+      </div> 
+
+
+      <!-- Contenedor de gráficos principal -->
+      <div class="col-md-9">
+
+        <div class="row">    
+            <div class="vizprev2">
+                <h1 style = "margin-left: 15px;">Calificación promedio por año y género</h1>
+                <p style = "margin-left: 15px;height: 18px;" align="justify">La calificación promedio de los juegos ha caido constantemente a partir del año 2005; las únicas categorías que ha mantenido un promedio mas alto ha sido 'Role-Playing' y 'Platform'. En contraste, los juegos de deportes y estrategia perdieron puntos rápidamente debido a que no ha habido innovación, la mayoría de esos juegos han sido actualizaciones de estrenos pasados.</p>
+                <div id="div_template"></div>
+                <p style = "margin-left: 15px;height: 25px;" align="center">Coloca el cursos sobre la matriz para ver la calificación promedio de los usuarios.</p>
+            </div>
+            
+        </div>
+
+    </div>
+  </div> 
+
+<!-- Contenedor de gráficos principal -->
+  <script src="/js/d3.v4.min.js"></script>
+  <script src="/js/jeezy.min.js"></script>
+  <script src="/js/chroma.min.js"></script>
+  <script>
+
+    claro = true
+
+    function toggle() {
+      claro = !claro
+
+      if (claro) {
+        d3.select('#graf')
+          .style('background-color', 'black')
+          .style('color', 'white')
+      } else {
+        d3.select('#graf')
+          .style('background-color', 'white')
+          .style('color', 'black')
+      }
+    }
+
+  </script>
+  <script src="js/matriz.js"></script>
+
+</body>
+</html>
